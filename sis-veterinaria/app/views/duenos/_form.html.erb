@@ -1,0 +1,37 @@
+<%= form_for(@dueno) do |f| %>
+  <% if @dueno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dueno.errors.count, "error") %> prohibited this dueno from being saved:</h2>
+
+      <ul>
+      <% @dueno.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.number_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br />
+    <%= f.number_field :celular %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

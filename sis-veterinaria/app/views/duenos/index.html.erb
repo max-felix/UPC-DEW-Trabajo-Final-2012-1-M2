@@ -1,0 +1,31 @@
+<h1>Listing duenos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+    <th>Celular</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @duenos.each do |dueno| %>
+  <tr>
+    <td><%= dueno.nombre %></td>
+    <td><%= dueno.email %></td>
+    <td><%= dueno.direccion %></td>
+    <td><%= dueno.telefono %></td>
+    <td><%= dueno.celular %></td>
+    <td><%= link_to 'Show', dueno %></td>
+    <td><%= link_to 'Edit', edit_dueno_path(dueno) %></td>
+    <td><%= link_to 'Destroy', dueno, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dueno', new_dueno_path %>

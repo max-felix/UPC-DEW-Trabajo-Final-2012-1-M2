@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @dueno.nombre %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @dueno.email %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @dueno.direccion %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @dueno.telefono %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @dueno.celular %>
+</p>
+
+
+<%= link_to 'Edit', edit_dueno_path(@dueno) %> |
+<%= link_to 'Back', duenos_path %>
